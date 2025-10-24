@@ -1,0 +1,72 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "betting-theme/hero-block",
+	"version": "1.0.0",
+	"title": "Hero Block",
+	"category": "betting-theme-blocks",
+	"icon": "welcome-view-site",
+	"description": "Hero block with title, description, bonus amount and call-to-action button.",
+	"keywords": ["hero", "banner", "betting", "bonus"],
+	"textdomain": "betting-theme-max",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./editor.css",
+	"style": "file:./style.css",
+	"render": "file:./render.php",
+	"supports": {
+		"align": ["wide", "full"],
+		"html": false,
+		"anchor": true,
+		"customClassName": true
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": "1 Win India -"
+		},
+		"titleLink": {
+			"type": "string",
+			"default": "Official Website"
+		},
+		"titleLinkUrl": {
+			"type": "string",
+			"default": "#"
+		},
+		"subtitle": {
+			"type": "string",
+			"default": "for Sports Betting"
+		},
+		"description": {
+			"type": "string",
+			"default": "Dive into the gaming world of online sports betting with 1Win, India's leading bookmaker. Designed for smart bettors, our website offers a huge selection of sports events from cricket to football, basketball to tennis, plus eSports and live betting. With competitive odds, a user-friendly interface, and secure transactions, you can place bets, statistics and results, allowing you to make informed bets."
+		},
+		"bonusTitle": {
+			"type": "string",
+			"default": "Получите до"
+		},
+		"bonusAmount": {
+			"type": "string",
+			"default": "80 000 ₽"
+		},
+		"bonusSubtext": {
+			"type": "string",
+			"default": "бонуса за регистрацию"
+		},
+		"bonusNote": {
+			"type": "string",
+			"default": "вывод без ограничений*"
+		},
+		"buttonText": {
+			"type": "string",
+			"default": "Забрать бонус"
+		},
+		"buttonUrl": {
+			"type": "string",
+			"default": "#"
+		},
+		"backgroundColor": {
+			"type": "string",
+			"default": "#0A0F1C"
+		}
+	}
+}

@@ -1,0 +1,154 @@
+/* Hero Block Editor Styles */
+.wp-block-betting-theme-hero-block {
+    all: initial;
+    display: block;
+    padding: 40px 20px;
+    min-height: 250px;
+    background: linear-gradient(90deg, #0F172A 0%, #334155 124.56%),
+                linear-gradient(0deg, rgba(0, 0, 0, 0.73), rgba(0, 0, 0, 0.73));
+}
+
+.wp-block-betting-theme-hero-block *,
+.wp-block-betting-theme-hero-block *::before,
+.wp-block-betting-theme-hero-block *::after {
+    box-sizing: border-box;
+}
+
+.wp-block-betting-theme-hero-block .hero-block__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.wp-block-betting-theme-hero-block .hero-block__content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.wp-block-betting-theme-hero-block .hero-block__title {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.2;
+    margin: 0 0 10px 0;
+}
+
+.wp-block-betting-theme-hero-block .hero-block__title-link {
+    color: #1D4ED8;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+.wp-block-betting-theme-hero-block .hero-block__subtitle {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: #fff;
+    margin: 0 0 32px 0;
+    line-height: 1.2;
+}
+
+.wp-block-betting-theme-hero-block .hero-block__description {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #fff;
+    margin: 0;
+    font-weight: 400;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+/* Bonus Card */
+.wp-block-betting-theme-hero-block .hero-block__bonus {
+    flex: 0 0 auto;
+    background-color: #0E1421;
+    box-shadow: 0px 3px 37px 0px #3B82F633;
+    border: 1px solid #3B82F680;
+    border-radius: 12px;
+    padding: 30px;
+    min-width: 587px;
+    text-align: left;
+}
+
+.wp-block-betting-theme-hero-block .hero-block__bonus-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.wp-block-betting-theme-hero-block .hero-block__bonus-icon {
+    width: 57px;
+    height: 57px;
+    flex-shrink: 0;
+}
+
+.wp-block-betting-theme-hero-block .hero-block__bonus-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.wp-block-betting-theme-hero-block .hero-block__bonus-title {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+    color: #fff;
+    white-space: nowrap;
+    margin: 0;
+}
+
+.wp-block-betting-theme-hero-block .hero-block__bonus-amount {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 64px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1;
+    margin: 0 0 8px 0;
+}
+
+.wp-block-betting-theme-hero-block .hero-block__bonus-subtext {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 24px;
+    color: #fff;
+    margin: 0 0 8px 0;
+    font-weight: 400;
+}
+
+.wp-block-betting-theme-hero-block .hero-block__bonus-note {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    color: #1D4ED8;
+    margin: 0 0 25px 0;
+    font-weight: 400;
+}
+
+.wp-block-betting-theme-hero-block .hero-block__button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: #1D4ED8;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.wp-block-betting-theme-hero-block .hero-block__button svg {
+    width: 16px;
+    height: 16px;
+    display: block;
+}

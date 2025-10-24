@@ -421,3 +421,73 @@ add_action( 'admin_enqueue_scripts', 'betting_theme_max_nav_menu_media_scripts' 
  * Load Customizer Files
  */
 require get_template_directory() . '/inc/customizer-footer.php';
+
+/**
+ * ===================================================================
+ * GUTENBERG BLOCKS SYSTEM
+ * ===================================================================
+ */
+
+/**
+ * Register Custom Block Category
+ */
+function betting_theme_max_block_categories( $categories ) {
+    return array_merge(
+        array(
+            array(
+                'slug'  => 'betting-theme-blocks',
+                'title' => __( 'Betting Theme Blocks', 'betting-theme-max' ),
+            ),
+        ),
+        $categories
+    );
+}
+add_filter( 'block_categories_all', 'betting_theme_max_block_categories', 10, 2 );
+
+/**
+ * Register Custom Blocks
+ */
+function betting_theme_max_register_blocks() {
+    // Enqueue block editor scripts
+    add_action('enqueue_block_editor_assets', function() {
+        // Ensure WordPress dependencies are loaded first
+        wp_enqueue_script('wp-blocks');
+        wp_enqueue_script('wp-element');
+        wp_enqueue_script('wp-i18n');
+        wp_enqueue_script('wp-block-editor');
+        wp_enqueue_script('wp-components');
+        wp_enqueue_script('wp-data');
+        
+        // Hero Block - Editor Script
+        wp_enqueue_script(
+            'betting-theme-hero-block-editor',
+            get_template_directory_uri() . '/blocks/hero-block/index.js',
+            array('wp-blocks', 'wp-element', 'wp-i18n', 'wp-block-editor', 'wp-components'),
+            '1.0.0',
+            true
+        );
+        
+        // Hero Block - Editor Style
+        wp_enqueue_style(
+            'betting-theme-hero-block-editor-style',
+            get_template_directory_uri() . '/blocks/hero-block/editor.css',
+            array(),
+            '1.0.0'
+        );
+    }, 5);
+    
+    // Enqueue frontend assets
+    add_action('wp_enqueue_scripts', function() {
+        // Hero Block - Frontend Style
+        wp_enqueue_style(
+            'betting-theme-hero-block-style',
+            get_template_directory_uri() . '/blocks/hero-block/style.css',
+            array(),
+            '1.0.0'
+        );
+    });
+    
+    // Register Hero Block
+    register_block_type( get_template_directory() . '/blocks/hero-block/block.json' );
+}
+add_action( 'init', 'betting_theme_max_register_blocks', 5 );
