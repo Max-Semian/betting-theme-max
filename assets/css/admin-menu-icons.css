@@ -1,0 +1,95 @@
+/**
+ * Admin Menu Icons Styles
+ * 
+ * @package Betting_Theme_Max
+ */
+
+.field-icon {
+    margin: 10px 0;
+    padding: 10px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.field-icon label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #23282d;
+}
+
+.field-icon .icon-type-tabs {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.field-icon .icon-type-tabs button {
+    padding: 8px 15px;
+    margin-right: 5px;
+    margin-bottom: -1px;
+    background: transparent;
+    border: 1px solid transparent;
+    border-bottom: none;
+    cursor: pointer;
+    font-size: 13px;
+    transition: all 0.2s;
+}
+
+.field-icon .icon-type-tabs button.active {
+    background: #fff;
+    border-color: #ddd;
+    border-bottom-color: #fff;
+    font-weight: 600;
+}
+
+.field-icon .icon-type-tabs button:hover:not(.active) {
+    background: #f5f5f5;
+}
+
+.field-icon .icon-option {
+    display: none;
+    padding: 15px 0;
+}
+
+.field-icon .icon-option.active {
+    display: block;
+}
+
+.field-icon input[type="text"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 6px 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.field-icon select {
+    width: 100%;
+    max-width: 400px;
+    padding: 6px 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.field-icon .button {
+    margin-top: 8px;
+}
+
+.field-icon #media-icon-preview img {
+    max-width: 50px;
+    max-height: 50px;
+    display: block;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    padding: 3px;
+    background: #fff;
+}
+
+.field-icon .description {
+    display: block;
+    margin-top: 5px;
+    color: #666;
+    font-size: 12px;
+    font-style: italic;
+}

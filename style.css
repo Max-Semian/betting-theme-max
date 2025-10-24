@@ -27,44 +27,14 @@ body {
     background-color: #fff;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-}
-
-/* === Header === */
-.site-header {
-    background-color: #1a1d29;
-    padding: 1rem 0;
-}
-
-.site-title {
-    margin: 0;
-    font-size: 1.5rem;
-    color: #fff;
-}
-
-.site-title a {
-    color: #fff;
-    text-decoration: none;
-}
-
-/* === Navigation === */
-.main-navigation ul {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-}
-
-.main-navigation a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.main-navigation a:hover {
-    color: #2CD8B9;
 }
 
 /* === Content === */

@@ -18,40 +18,66 @@
 <?php wp_body_open(); ?>
 
 <div id="page" class="site">
+    <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'betting-theme-max' ); ?></a>
+
     <header id="masthead" class="site-header">
-        <div class="container">
+        <div class="header-container">
+            <!-- Logo -->
             <div class="site-branding">
                 <?php if ( has_custom_logo() ) : ?>
-                    <div class="site-logo">
+                    <div class="custom-logo-wrapper">
                         <?php the_custom_logo(); ?>
                     </div>
-                <?php endif; ?>
-                
-                <h1 class="site-title">
-                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                        <?php bloginfo( 'name' ); ?>
-                    </a>
-                </h1>
-                
-                <?php
-                $description = get_bloginfo( 'description', 'display' );
-                if ( $description || is_customize_preview() ) :
-                    ?>
-                    <p class="site-description"><?php echo $description; ?></p>
+                <?php else : ?>
+                    <div class="site-title">
+                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                            <?php bloginfo( 'name' ); ?>
+                        </a>
+                    </div>
                 <?php endif; ?>
             </div>
 
+            <!-- Main Navigation -->
             <nav id="site-navigation" class="main-navigation">
                 <?php
                 wp_nav_menu(
                     array(
-                        'theme_location' => 'menu-1',
+                        'theme_location' => 'primary',
                         'menu_id'        => 'primary-menu',
+                        'container'      => false,
+                        'menu_class'     => 'primary-menu',
                         'fallback_cb'    => false,
+                        'walker'         => new Betting_Theme_Walker_Nav_Menu(),
                     )
                 );
                 ?>
             </nav>
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+                <!-- Registration Button -->
+                <a href="<?php echo esc_url( get_theme_mod( 'registration_url', '#register' ) ); ?>" class="btn-registration">
+                    <span><?php esc_html_e( 'Registration', 'betting-theme-max' ); ?></span>
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/User-icon.png" alt="<?php esc_attr_e( 'App Icon', 'betting-theme-max' ); ?>">
+
+                </a>
+
+                <!-- Promotions Button -->
+                <a href="<?php echo esc_url( get_theme_mod( 'promotions_url', '#promotions' ) ); ?>" class="btn-promotions">
+                    
+                    <span><?php esc_html_e( 'Application', 'betting-theme-max' ); ?></span>
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/Cloud-icon.png" alt="<?php esc_attr_e( 'App Icon', 'betting-theme-max' ); ?>">
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                <span class="hamburger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </button>
         </div>
     </header>
 
