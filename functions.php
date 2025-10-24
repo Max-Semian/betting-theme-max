@@ -87,6 +87,9 @@ function betting_theme_max_scripts() {
     // Header styles
     wp_enqueue_style( 'betting-theme-max-header', get_template_directory_uri() . '/assets/css/header.css', array( 'betting-theme-max-style' ), '1.0.0' );
 
+    // Footer styles
+    wp_enqueue_style( 'betting-theme-max-footer', get_template_directory_uri() . '/assets/css/footer.css', array( 'betting-theme-max-style' ), '1.0.0' );
+
     // Header JavaScript
     wp_enqueue_script( 'betting-theme-max-header', get_template_directory_uri() . '/assets/js/header.js', array(), '1.0.0', true );
 
@@ -413,3 +416,8 @@ function betting_theme_max_nav_menu_media_scripts( $hook ) {
     );
 }
 add_action( 'admin_enqueue_scripts', 'betting_theme_max_nav_menu_media_scripts' );
+
+/**
+ * Load Customizer Files
+ */
+require get_template_directory() . '/inc/customizer-footer.php';

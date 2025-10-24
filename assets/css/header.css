@@ -58,7 +58,7 @@
 
 @media (min-width: 1025px) {
     .custom-logo-wrapper {
-        margin-left: 200px;
+        margin-left: 20px;
     }
 }
 
@@ -311,15 +311,9 @@
 
 /* Large Screens - fix logo margin */
 @media (max-width: 1400px) {
-    .custom-logo-wrapper {
-        margin-left: 100px;
-    }
 }
 
 @media (max-width: 1216px) {
-    .custom-logo-wrapper {
-        margin-left: 40px;
-    }
     
     .header-container {
         padding: 0 15px;
