@@ -1,0 +1,73 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "betting-theme/step-block",
+	"version": "1.0.0",
+	"title": "Step Block",
+	"category": "betting-theme-blocks",
+	"icon": "list-view",
+	"description": "Step-by-step block showing process instructions with numbered steps and images.",
+	"keywords": ["step", "process", "guide", "tutorial", "how-to"],
+	"textdomain": "betting-theme-max",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./editor.css",
+	"style": "file:./style.css",
+	"render": "file:./render.php",
+	"supports": {
+		"align": ["wide", "full"],
+		"html": false,
+		"anchor": true,
+		"customClassName": true
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": "Как использовать промокод?"
+		},
+		"steps": {
+			"type": "array",
+			"default": [
+				{
+					"number": "1",
+					"title": "Выберите лицензированный сайт ставок",
+					"description": "Выберите сайт ставок, который легализирован в вашем выбранном рынке. Откройте 1Win сегодня и получите свой первый депозитный бонус!",
+					"buttonText": "О казино 1Win",
+					"buttonUrl": "#",
+					"imageUrl": "",
+					"imageAlt": "Step 1 Image"
+				},
+				{
+					"number": "2",
+					"title": "Посетите веб-сайт",
+					"description": "Используйте браузер для доступа к официальному сайту выбранного вами букмекера (или Казино 1Win согласно). Перейдите кнопкой своем смартфоне или ПК.",
+					"buttonText": "",
+					"buttonUrl": "#",
+					"imageUrl": "",
+					"imageAlt": "Step 2 Image"
+				},
+				{
+					"number": "3",
+					"title": "Процедура регистрации",
+					"description": "Нажмите кнопку «Зарегистрироваться» и заполните свои данные и сделать промокода. Введите свои данные и нажмите «Создать аккаунт».",
+					"buttonText": "Регистрация",
+					"buttonUrl": "#",
+					"imageUrl": "",
+					"imageAlt": "Step 3 Image"
+				},
+				{
+					"number": "4",
+					"title": "Процедура внесения депозита",
+					"description": "Нажмите кнопку «Зарегистрироваться» и заполните свои данные и сделать промокода. Введите свои данные и нажмите «Создать аккаунт».",
+					"buttonText": "",
+					"buttonUrl": "#",
+					"imageUrl": "",
+					"imageAlt": "Step 4 Image"
+				}
+			]
+		},
+		"backgroundColor": {
+			"type": "string",
+			"default": "#F8F9FA"
+		}
+	}
+}

@@ -477,6 +477,23 @@ function betting_theme_max_register_blocks() {
             array(),
             '1.0.0'
         );
+        
+        // Step Block - Editor Script
+        wp_enqueue_script(
+            'betting-theme-step-block-editor',
+            get_template_directory_uri() . '/blocks/step-block/index.js',
+            array('wp-blocks', 'wp-element', 'wp-i18n', 'wp-block-editor', 'wp-components'),
+            '1.0.0',
+            true
+        );
+        
+        // Step Block - Editor Style
+        wp_enqueue_style(
+            'betting-theme-step-block-editor-style',
+            get_template_directory_uri() . '/blocks/step-block/editor.css',
+            array(),
+            '1.0.0'
+        );
     }, 5);
     
     // Enqueue frontend assets
@@ -488,9 +505,29 @@ function betting_theme_max_register_blocks() {
             array(),
             '1.0.0'
         );
+        
+        // Step Block - Frontend Style
+        wp_enqueue_style(
+            'betting-theme-step-block-style',
+            get_template_directory_uri() . '/blocks/step-block/style.css',
+            array(),
+            '1.0.0'
+        );
+        
+        // Step Block - Frontend Script
+        wp_enqueue_script(
+            'betting-theme-step-block-script',
+            get_template_directory_uri() . '/blocks/step-block/script.js',
+            array(),
+            '1.0.0',
+            true
+        );
     });
     
     // Register Hero Block
     register_block_type( get_template_directory() . '/blocks/hero-block/block.json' );
+    
+    // Register Step Block
+    register_block_type( get_template_directory() . '/blocks/step-block/block.json' );
 }
 add_action( 'init', 'betting_theme_max_register_blocks', 5 );
