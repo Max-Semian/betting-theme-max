@@ -93,6 +93,9 @@ function betting_theme_max_scripts() {
     // Header JavaScript
     wp_enqueue_script( 'betting-theme-max-header', get_template_directory_uri() . '/assets/js/header.js', array(), '1.0.0', true );
 
+    // Footer JavaScript
+    wp_enqueue_script( 'betting-theme-max-footer', get_template_directory_uri() . '/assets/js/footer.js', array(), '1.0.0', true );
+
     // Main JavaScript
     wp_enqueue_script( 'betting-theme-max-script', get_template_directory_uri() . '/js/main.js', array(), '1.0.0', true );
 

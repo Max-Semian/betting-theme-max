@@ -29,11 +29,13 @@
                 const isExpanded = navigation.classList.contains('toggled');
                 this.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
                 
-                // Prevent body scroll when menu is open
+                // Prevent body scroll and fix header when menu is open
                 if (isExpanded) {
                     body.style.overflow = 'hidden';
+                    body.classList.add('mobile-menu-open');
                 } else {
                     body.style.overflow = '';
+                    body.classList.remove('mobile-menu-open');
                 }
             });
         }
@@ -56,6 +58,7 @@
                         </svg>
                     </button>
                     <span class="submenu-title">${link.textContent}</span>
+                    <span class="submenu-spacer"></span>
                 `;
                 
                 // Insert header at the beginning of submenu
@@ -92,6 +95,7 @@
                 if (navigation && navigation.classList.contains('toggled')) {
                     navigation.classList.remove('toggled');
                     body.style.overflow = '';
+                    body.classList.remove('mobile-menu-open');
                     if (menuToggle) {
                         menuToggle.setAttribute('aria-expanded', 'false');
                     }
@@ -104,6 +108,7 @@
             if (e.key === 'Escape' && navigation && navigation.classList.contains('toggled')) {
                 navigation.classList.remove('toggled');
                 body.style.overflow = '';
+                body.classList.remove('mobile-menu-open');
                 if (menuToggle) {
                     menuToggle.setAttribute('aria-expanded', 'false');
                     menuToggle.focus();
@@ -121,6 +126,7 @@
                     if (navigation && navigation.classList.contains('toggled')) {
                         navigation.classList.remove('toggled');
                         body.style.overflow = '';
+                        body.classList.remove('mobile-menu-open');
                         if (menuToggle) {
                             menuToggle.setAttribute('aria-expanded', 'false');
                         }
@@ -150,6 +156,7 @@
                         if (navigation && navigation.classList.contains('toggled')) {
                             navigation.classList.remove('toggled');
                             body.style.overflow = '';
+                            body.classList.remove('mobile-menu-open');
                             if (menuToggle) {
                                 menuToggle.setAttribute('aria-expanded', 'false');
                             }
